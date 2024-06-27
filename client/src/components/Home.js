@@ -1,9 +1,10 @@
 import { useFetchCampingsQuery } from '../store';
-import CampingListPage from '../pages/CampingListPage';
+import CampingListDetail from './CampingListDetail';
 import Skeleton from './Skeleton';
 
 function Home() {
 	const { data: campingData, error, isLoading } = useFetchCampingsQuery();
+
 	let content;
 
 	if (isLoading) {
@@ -23,7 +24,7 @@ function Home() {
 						Go Camping Site Info
 					</h1>
 				</div>
-				<CampingListPage campingData={campingData} />
+				<CampingListDetail campingData={campingData} />
 			</>
 		);
 	}

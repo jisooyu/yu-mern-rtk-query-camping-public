@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { GoChevronDown, GoChevronLeft } from 'react-icons/go';
 
 export default function CampingListDetail({ campingData }) {
-	const items = campingData.campingData;
 	const [expandedIndex, setExpandedIndex] = useState(-1);
 
 	const handleClick = (nextIndex) => {
@@ -11,7 +10,7 @@ export default function CampingListDetail({ campingData }) {
 			: setExpandedIndex(nextIndex);
 	};
 
-	const renderedItems = items.map((item, index) => {
+	const renderedItems = campingData.map((item, index) => {
 		const isExpanded = expandedIndex === index;
 		const icon = (
 			<span className='text-2xl'>
