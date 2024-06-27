@@ -11,7 +11,7 @@ node_modules/
 /coverage
 
 #key config
-/config/serviceKey.js
+/server/config/serviceKey.js
 
 # production
 /build
