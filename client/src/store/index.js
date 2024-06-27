@@ -11,6 +11,9 @@ export const store = configureStore({
 	},
 });
 
+/* setupListeners(store.dispatch): 
+This initializes the listeners and links them to the store's dispatch method, 
+enabling automatic refetching functionality.*/
 setupListeners(store.dispatch);
 
 export { useFetchCampingsQuery } from './apis/campingApi';

@@ -4,7 +4,7 @@ const campingApi = createApi({
 	reducerPath: 'camping', // reducerPath는 모든 state, property에 access 할 수 있는 key
 	// fetchBaseQuery는 template function
 	baseQuery: fetchBaseQuery({
-		baseUrl: 'http://localhost:5555',
+		baseUrl: 'http://localhost:5000',
 	}),
 	endpoints(builder) {
 		return {
